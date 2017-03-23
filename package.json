@@ -46,6 +46,5 @@
   },
   "private": true,
   "dependencies": {
-    "ember-bulma": "^0.1.6"
   }
 }
