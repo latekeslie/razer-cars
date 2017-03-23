@@ -14,13 +14,16 @@
               <th colspan="2">Number of Models</th>
             </tr>
           </thead>
+          {{#each model as |manufacturer|}}
+          <tr>
+            <td>{{manufacturer.name}}</td>
+            <td>{{manufacturer.country}}</td>
+            <td>{{manufacturer.cars.length}}</td>
+            <td>{{#link-to "manufacturers"}}See moooar{{/link-to}}</td>
+          </tr>
+          {{/each}}
           <tbody>
-            <tr>
-              <td></td>
-              <td></td>
-              <td></td>
-              {{!-- <td>{{#link-to ""}}See moooar{{/link-to}}</td> --}}
-            </tr>
+
           </tbody>
         </table>
       </div>
