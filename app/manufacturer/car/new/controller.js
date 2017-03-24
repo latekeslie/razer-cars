@@ -5,10 +5,10 @@ export default Ember.Controller.extend({
 
   actions: {
     save() {
-      const newBrand = this.store.createRecord('brand', this.formValues);
+      const newCar = this.store.createRecord('car', this.formValues);
+      newCar.set('brand', this.model);
 
-      newBrand.save().then(() => {
-        this.set('formValues', {});
+      newCar.save().then(() => {
         this.transitionToRoute('manufacturer.index')
       });
     }
