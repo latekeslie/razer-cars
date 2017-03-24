@@ -8,7 +8,7 @@ export default Ember.Controller.extend({
       const newBrand = this.store.createRecord('brand', this.formValues);
 
       newBrand.save().then(() => {
-        this.transitionToRoute('manufacturers')
+        this.transitionToRoute('manufacturer.index')
       });
     }
   }
