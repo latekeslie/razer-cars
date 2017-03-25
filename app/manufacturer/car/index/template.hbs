@@ -5,9 +5,15 @@
         <h1 class="panel-title">{{model.name}} - {{model.country}}</h1>
       </div>
       <div class="panel-body">
-        {{#link-to "edit" class="btn btn-primary col-md-2 "}}Edit Manufacturer{{/link-to}}
-        <button {{action "deleteManufacturer"model}} class="btn btn-error col-md-2 col-md-offset-3">Delete Manufacturer</button>
-        {{#link-to "manufacturer.car.new" class="btn btn-warning col-md-2 col-md-offset-3"}}Add New Car{{/link-to}}
+        <div class="row">
+          <div class="col-sm-1"></div>
+          {{#link-to "edit" class="btn btn-primary col-sm-2"}}Edit Manufacturer{{/link-to}}
+          <div class="col-sm-2"></div>
+          <button {{action "deleteManufacturer"model}} class="btn btn-danger col-sm-2">Delete Manufacturer</button>
+          <div class="col-sm-2"></div>
+          {{#link-to "manufacturer.car.new" class="btn btn-warning col-sm-2"}}Add New Car{{/link-to}}
+          <div class="col-sm-1"></div>
+        </div>
       </div>
     </div>
   </div>
@@ -24,8 +30,8 @@
         <p>{{car.hp}}</p>
         <p>{{car.price}}</p>
       </div>
-      <div class="panel-footer">
-        <button {{action "deleteCar"car}} class="btn btn-error">Delete</button>
+      <div class="panel-footer text-center">
+        <button {{action "deleteCar"car}} class="btn btn-danger">Delete</button>
       </div>
     </div>
   </div>

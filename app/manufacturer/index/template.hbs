@@ -6,7 +6,7 @@
       </div>
       <div class="panel-body">
         {{log model}}
-        <table class="table">
+        <table class="table table-striped">
           <thead>
             <tr class="table-header">
               <th>Manufacturer</th>
@@ -14,16 +14,15 @@
               <th colspan="2">Number of Models</th>
             </tr>
           </thead>
-          {{#each model as |manufacturer|}}
-          <tr>
-            <td>{{manufacturer.name}}</td>
-            <td>{{manufacturer.country}}</td>
-            <td>{{manufacturer.cars.length}}</td>
-            <td>{{#link-to "manufacturer.car" manufacturer}}See moooar{{/link-to}}</td>
-          </tr>
-          {{/each}}
           <tbody>
-
+            {{#each model as |manufacturer|}}
+            <tr>
+              <td>{{manufacturer.name}}</td>
+              <td>{{manufacturer.country}}</td>
+              <td>{{manufacturer.cars.length}}</td>
+              <td>{{#link-to "manufacturer.car" manufacturer}}See moooar{{/link-to}}</td>
+            </tr>
+            {{/each}}
           </tbody>
         </table>
       </div>
