@@ -1,16 +1,16 @@
 <div class="row">
   <div class="col-md-12">
-    <form class="form" {{action "edit" on="submit"}}>
+    <form class="form" {{action "edit" model on="submit"}}>
       <div class="panel panel-default">
         <div class="panel-heading">
           <h1 class="panel-title">Edit Manufacturer</h1>
         </div>
         <div class="panel-body">
           <div class="form-group">
-            {{input type="text" value=model.name class="form-control" placeholder="Company Name"}}
+            {{input type="text" placeholder="Company Name" value=model.name class="form-control edit" }}
           </div>
           <div class="form-group">
-            {{input type="text" value=model.country class="form-control" placeholder="ISO Country Code"}}
+            {{input type="text" placeholder="ISO Country Code" value=model.country class="form-control edit" }}
           </div>
         </div>
         <div class="panel-footer">
@@ -23,5 +23,3 @@
     </form>
   </div>
 </div>
-
-{{outlet}}
