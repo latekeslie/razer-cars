@@ -1,0 +1,39 @@
+<div class="row">
+  <div class="col-md-12">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h1 class="panel-title">{{model.name}} - {{model.country}}</h1>
+      </div>
+      <div class="panel-body">
+        <div class="row">
+          <div class="col-sm-1"></div>
+          {{#link-to "manufacturer.edit" model.id class="btn btn-primary col-sm-2"}}Edit Manufacturer{{/link-to}}
+          <div class="col-sm-2"></div>
+          <button {{action "deleteManufacturer"model}} class="btn btn-danger col-sm-2">Delete Manufacturer</button>
+          <div class="col-sm-2"></div>
+          {{#link-to "manufacturer.car.new" class="btn btn-warning col-sm-2"}}Add New Car{{/link-to}}
+          <div class="col-sm-1"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  {{#each model.cars as |car|}}
+  <div class="col-md-4">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h1 class="panel-title">{{car.name}} - {{car.year}}</h1>
+      </div>
+      <div class="panel-body">
+        <p>{{car.hp}}</p>
+        <p>{{car.price}}</p>
+      </div>
+      <div class="panel-footer text-center">
+        <button {{action "deleteCar"car}} class="btn btn-danger">Delete</button>
+      </div>
+    </div>
+  </div>
+  {{/each}}
+</div>

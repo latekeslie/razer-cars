@@ -1,0 +1,33 @@
+<div class="row">
+  <div class="col-md-12">
+    <form class="form" {{action "save" on="submit"}}>
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h1 class="panel-title">Add New Car for {{model.name}}</h1>
+        </div>
+        <div class="panel-body">
+          <div class="form-group">
+            {{input type="text" value=formValues.name class="form-control" placeholder="Model Name"}}
+          </div>
+          <div class="form-group">
+            {{input type="text" value=formValues.year class="form-control" placeholder="Year"}}
+          </div>
+          <div class="form-group">
+            {{input type="text" value=formValues.hp class="form-control" placeholder="Horsepower"}}
+          </div>
+          <div class="form-group">
+            {{input type="text" value=formValues.price class="form-control" placeholder="Price"}}
+          </div>
+        </div>
+        <div class="panel-footer">
+          <p>
+            {{#link-to "manufacturer.index" class="btn btn-primary"}}Back{{/link-to}}
+            <button class="btn btn-warning" type="submit">Submit</button>
+          </p>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+
+{{outlet}}
